@@ -82,14 +82,19 @@ qvis(mtcars, ~wt, ~mpg, shape := "cross")
 
 As well as mapping visual properties to variables, or setting them to specific values, you can also connect them to interactive controls.
 
+**Please note that most of the interactive plots below will not work properly when viewing this document as a web page. The first example below will work because it has been manually added in an iframe, but the others will not. If you want to see them in action, run the code in R.**
+
+
 The following example allows you to control the size and opacity of points with two sliders:
 
-```{r, results = 'asis'}
+```{r, results = 'asis', eval = FALSE}
 slider_s <- input_slider(10, 100)
 slider_o <- input_slider(0, 1, value = 0.5)
 
 qvis(mtcars, ~wt, ~mpg, size := slider_s, opacity := slider_o)
 ```
+
+<iframe id="ggvis-slider-2" src="https://winston.shinyapps.io/ggvis-basics-slider/?viewer_pane=1" style="border: none; width: 400px; height: 400px"></iframe>
 
 You can also connect interactive components to other plot parameters like the binwidth of a histogram:
 

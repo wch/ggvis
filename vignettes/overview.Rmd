@@ -38,12 +38,7 @@ ggvis(faithful, props(x = ~eruptions, fill := "#ffffdd", fill.hover := "#eebbbb"
 
 Scatterplot with model fit line and interactive control:
 
-```{r, results = 'asis', echo = FALSE, message = FALSE}
-# Scatter plot with model fit line
-ggvis(mtcars, props(x = ~wt, y = ~mpg)) +
-  layer_point() +
-  layer_smooth(se = TRUE)
-```
+<iframe id="histogram" src="https://winston.shinyapps.io/ggvis-quick-examples-smooth-span/?viewer_pane=1" style="border: none; width: 400px; height: 400px"></iframe>
 
 ## Getting started with ggvis
 
